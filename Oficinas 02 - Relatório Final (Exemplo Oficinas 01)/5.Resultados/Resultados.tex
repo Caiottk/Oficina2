@@ -1,0 +1,23 @@
+%%%% CAPÍTULO 4 - RESULTADOS E DISCUSSÃO
+%%
+%% Deve descrever detalhadamente os dados obtidos 
+%% pelo autor. Normalmente são incluídas ilustrações
+%% como: quadros, tabelas, gráficos, etc. Deve efetuar
+%% a comparação dos dados obtidos e/ou resultados, com
+%% aqueles descritos na revisão de literatura, 
+%% incluindo os comentários sobre os estudos de outros
+%% autores.
+
+%% Título e rótulo de capítulo (rótulos não devem conter caracteres especiais, acentuados ou cedilha)
+\chapter{Resultados}\label{cap:resultados}
+
+O desenvolvimento do 3D Scan demonstrou avanços significativos em várias áreas, incluindo a estrutura, mecânica e software. No entanto, alguns desafios persistem, especialmente no que diz respeito à precisão da captura de distâncias pelo sensor utilizado.
+
+Durante os testes de escaneamento, observamos que o sensor de distância frequentemente captura pontos que não fazem parte do objeto alvo. Este problema ocorre devido a variações na tensão do sensor ao longo do tempo. Analisando o \textit{datasheet} do sensor, identificamos que a relação entre a distância captada e a tensão não é linear, contribuindo para esses erros de medição.
+
+A estrutura e a mecânica do scanner funcionam conforme o esperado. O software controla eficientemente a altura do sensor, garantindo que ele se desloque verticalmente apenas até os limites pré-definidos. Esta precisão permite que o scanner capture todos os pontos de distância ao longo da altura do objeto com exatidão.
+
+O hardware foi montado e soldado em uma placa universal, o que pode estar contribuindo para as variações na tensão mencionadas anteriormente. Apesar disso, a alimentação dos motores, juntamente com os\textit{ Motor Shields} de controle e o ESP32, está operando perfeitamente. Durante o desenvolvimento, tivemos que ajustar uma das bases da estrutura devido a uma quebra causada pelo peso e tensão. A base foi reforçada, aumentando sua espessura e profundidade para melhorar o encaixe dos eixos, o que solucionou o problema estrutural.
+
+Na geração de imagens dos objetos escaneados, utilizamos o software MatLab e MeshLab. No entanto, enfrentamos dificuldades devido aos pontos de distância captados incorretamente pelo sensor. Por exemplo, ao escanear um cilindro, foi necessário aplicar um filtro específico que não é aplicável a todos os objetos, o que indica uma limitação na versatilidade do processo de geração de imagens.
+
